@@ -1,7 +1,7 @@
-class Student
+class Student: public Person
 {
 private:
-    /* data */
+    /*data*/
 public:
     Student(/* args */);
     ~Student();
