@@ -3,7 +3,6 @@
 int main(int argc, char const *argv[])
 {
     People person1("John", 21);
-    person1.printInfo();
-    
+    people1.printInfo();
     return 0;
 }
