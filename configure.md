@@ -1,1 +1,1 @@
-## Configure file.
+## Configure file has been updated.
