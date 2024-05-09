@@ -9,5 +9,7 @@ int main(int argc, char const *argv[])
     // Add new people
     People person3("Alice", 23);
     person3.printInfo();
+    People person4("Bob", 24);
+    person4.printInfo();
     return 0;
 }
