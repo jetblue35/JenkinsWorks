@@ -9,5 +9,6 @@ public:
     People(std::string name, int age);
     void printInfo();
     ~People();
+    void setAge(int age);
 };
 

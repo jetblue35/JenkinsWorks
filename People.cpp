@@ -14,3 +14,7 @@ void People::printInfo()
     std::cout << "Name: " << name << std::endl;
     std::cout << "Age: " << age << std::endl;
 }
+void People::setAge(int age)
+{
+    this->age = age;
+}
