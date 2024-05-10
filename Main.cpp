@@ -23,5 +23,7 @@ int main(int argc, char const *argv[])
     person8.printInfo();
     People person9("Grace", 29);
     person9.printInfo();
+    People person10("Helen", 30);
+    person10.printInfo();
     return 0;
 }
