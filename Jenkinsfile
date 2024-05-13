@@ -1,12 +1,11 @@
 pipeline {
   agent {
-    docker { image 'welcome-to-docker' }
+    docker { image 'ubuntu' }
   }
   stages {
     stage('Test') {
       steps {
-        // Run the windows command
-        bat 'echo "Hello, World!"'
+        sh 'echo "Hello, World!"'
       }
     }
   }
