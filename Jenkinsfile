@@ -1,6 +1,6 @@
 pipeline {
     // Docker image to use for the pipeline
-    agent {
+    agent any {
         docker {
             image 'welcome-to-docker:latest'
             //args '-v /root/.m2:/root/.m2'
