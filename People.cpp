@@ -11,6 +11,7 @@ People::~People()
 }
 void People::printInfo()
 {
+    std::cout << "----------------" << std::endl;
     std::cout << "Name: " << name << std::endl;
     std::cout << "Age: " << age << std::endl;
     std::cout << "----------------" << std::endl;
