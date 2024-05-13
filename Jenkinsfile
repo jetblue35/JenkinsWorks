@@ -5,7 +5,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'node --version'
+        // Run the windows command
+        bat 'echo "Hello, World!"'
       }
     }
   }
