@@ -1,11 +1,10 @@
 pipeline {
-    // Docker image to use for the pipeline
-    agent any 
+    agent {
         docker {
             image 'welcome-to-docker:latest'
             //args '-v /root/.m2:/root/.m2'
         }
-    
+    }
 
     stages {
         stage('Build') {
