@@ -1,9 +1,12 @@
 pipeline {
-    agent { 
-        node {
-            label 'jenkins-agent-goes-here'
-            }
-      }
+    // Docker image to use for the pipeline
+    agent {
+        docker {
+            image 'welcome-to-docker:latest'
+            //args '-v /root/.m2:/root/.m2'
+        }
+    }
+
     stages {
         stage('Build') {
             steps {
