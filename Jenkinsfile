@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Run the pwd command inside the container
-                    docker.image('my-jenkins-image:latest').inside {
+                    docker.image('ubuntu:latest').inside {
                         sh 'pwd'
                   }
                 }
