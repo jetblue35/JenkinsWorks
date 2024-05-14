@@ -6,7 +6,7 @@ pipeline {
                 script {
                     // Execute pipeline steps inside a Docker container
                     withDockerContainer('ubuntu:latest') {
-                        sh 'whoami'
+                        sh 'ls'
                     }
                 }
             }
