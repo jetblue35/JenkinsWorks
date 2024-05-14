@@ -3,10 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                script {
-                    docker.image('ubuntu:latest').inside {
-                        sh 'ls -l'
-                    }
+                docker.image('ubuntu:latest').inside {
+                    sh 'ls -l'
                 }
             }
         }
