@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    script {
-        // Run the docker container
-        docker.image('ubuntu:latest').inside {
-            sh 'ls -l'
-        }
-    }
     stages {
         stage('Test') {
             steps {
