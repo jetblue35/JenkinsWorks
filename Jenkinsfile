@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     docker.image('ubuntu:latest').inside {
-                        sh 'echo "Hello World"'
+                        sh 'ls -lah'
                     }
                 }
             }
