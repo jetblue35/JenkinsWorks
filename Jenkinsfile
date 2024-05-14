@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Run commands inside the Docker container
-                    sh 'whoami'
+                    sh 'ls -lah'
                 }
             }
         }
