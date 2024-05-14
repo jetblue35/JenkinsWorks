@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     docker.image('ubuntu:latest').inside {
-                        sh 'hostname'
+                        sh 'docker ps -q'
                     }
                 }
             }
