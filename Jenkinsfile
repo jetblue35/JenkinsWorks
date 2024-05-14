@@ -6,7 +6,7 @@ pipeline {
                 script {
                     // Run the pwd command inside the container
                     docker.image('ubuntu:latest').inside {
-                        sh 'pwd'
+                        sh 'ls -lah'
                   }
                 }
             }
