@@ -1,18 +1,15 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu:latest' // Use the latest Ubuntu image
-            
-        }
-    }
+    agent any
     stages {
         stage('Test') {
             steps {
-                withDockerContainer('ubuntu:latest') {
-                    sh 'echo "Hello World"'
+                script {
+                    // Execute pipeline steps inside a Docker container
+                    withDockerContainer('ubuntu:latest') {
+                        sh 'echo "Hello World"'
+                    }
                 }
             }
         }
     }
 }
-// Upps!
