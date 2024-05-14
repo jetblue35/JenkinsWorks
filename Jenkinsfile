@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    docker {
-        image 'ubuntu:latest'
-    }
+    dockerImage.run('ubuntu:latest')
     stages {
         stage('Test') {
             steps {
