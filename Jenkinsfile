@@ -6,8 +6,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                docker.inside {
+                script {
+                    docker.inside {
                     sh 'ls -l'
+                  }
                 }
             }
         }
