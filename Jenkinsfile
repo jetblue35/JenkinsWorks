@@ -1,4 +1,5 @@
 pipeline {
+    agent Built-In-Node
     stages {
         stage('Test') {
             steps {
