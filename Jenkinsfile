@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'ubuntu:latest' }
+        docker {
+            image 'ubuntu:latest'
+            user 'root' // Change 'root' to the desired user
+        }
     }
     stages {
         stage('Test') {
