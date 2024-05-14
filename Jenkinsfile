@@ -3,11 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                script {
-                    // Execute pipeline steps inside a Docker container
-                    withDockerContainer('jenkins/jenkins:lts') {
-                        sh 'ls -lah'
-                    }
+                docker.image('ubuntu:latest').inside {
+                    sh 'echo "Hello World"'
                 }
             }
         }
