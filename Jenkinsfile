@@ -7,7 +7,7 @@ pipeline {
                     // Run the pwd command inside the container
                     docker.image('ubuntu:latest').inside {
                         sh 'uname -a'
-                        sh 'sudo apt-get update'
+                        sh 'apt-get update'
                   }
                 }
             }
