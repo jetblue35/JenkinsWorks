@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                docker.image('ubuntu:latest').inside {
+                docker.inside {
                     sh 'ls -l'
                 }
             }
