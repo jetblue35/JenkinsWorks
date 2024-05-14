@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     docker.image('ubuntu:latest').inside {
-                        sh 'ls -lah'
+                        sh 'pwd'
                     }
                 }
             }
