@@ -6,7 +6,7 @@ pipeline {
                 script {
                     // Execute pipeline steps inside a Docker container
                     withDockerContainer('jenkins/jenkins:lts') {
-                        sh 'ls'
+                        sh 'ls -lah'
                     }
                 }
             }
