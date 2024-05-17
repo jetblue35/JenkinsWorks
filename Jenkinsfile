@@ -4,7 +4,7 @@ pipeline {
         stage('Clone the Repo:') { 
             steps {
                 echo 'Cloning the repository:'  
-                git 'https://github.com/jetblue35/JenkinsWorks.git'  // Kendi repo URL'nizi buraya ekleyin
+                git branch: 'main', url: 'https://github.com/jetblue35/JenkinsWorks.git'  // Replace 'main' with your branch name
             }
         }
         stage('Build') { 
