@@ -20,7 +20,11 @@ pipeline {
                     reuseNode true
                 }
             }
+            environment {
+                DOCKER_CONFIG = "${env.WORKSPACE}/.docker"  // Set custom Docker config directory
+            }
             steps {
+                sh 'mkdir -p $DOCKER_CONFIG'  // Create the Docker config directory
                 echo "Building app using Docker Image"
                 sh 'docker build -t my-app:latest .'  // Assuming you have a Dockerfile in your repository
             }
