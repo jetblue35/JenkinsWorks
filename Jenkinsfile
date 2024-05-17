@@ -16,7 +16,7 @@ pipeline {
         stage('Build') { 
             agent {
                 docker {
-                    image 'ubuntu:latest'
+                    image 'docker:latest'  // Use the docker image that has Docker CLI installed
                     reuseNode true
                 }
             }
