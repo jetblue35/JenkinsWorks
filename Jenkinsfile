@@ -11,7 +11,7 @@ pipeline
         {
             steps
             {
-                sh 'touch deneme.txt'
+                sh 'make'
             }
         }
     }
