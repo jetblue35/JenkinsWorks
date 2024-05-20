@@ -11,7 +11,7 @@ pipeline
         {
             steps
             {
-                sh 'pwd'
+                sh 'touch deneme.txt'
             }
         }
     }
