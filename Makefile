@@ -21,5 +21,4 @@ $(EXEC): $(OBJS) $(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
 %.o: %.cpp $(HEADERS) $(CC) $(CFLAGS) -c $< -o $@
 
 # Phony target to clean object files and executable
-clean:
-    rm -f $(OBJS) $(EXEC)
+clean: rm -f $(OBJS) $(EXEC)
