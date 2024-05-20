@@ -15,8 +15,8 @@ OBJS = $(SRCS:.cpp=.o)
 EXEC = myprogram
 
 # Rule to build the executable
-$(EXEC): $(OBJS)
-    $(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
+$(EXEC):    $(OBJS)
+            $(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
 
 # Rule to compile source files into object files
 %.o: %.cpp $(HEADERS)
