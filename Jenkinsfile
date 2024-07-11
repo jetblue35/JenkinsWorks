@@ -1,17 +1,15 @@
-pipeline
-{
-    agent
-    {
-        label 'agent1'
-        
-    }
-    stages
-    {
-        stage('Pre-build')
-        {
-            steps
-            {
-                sh 'make'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'cppncss --output=cppncss_report.xml --recursive .'
+            }
+        }
+        stage('Publish Results') {
+            steps {
+                publishCppncssResults pattern: 'cppncss_report.xml'
             }
         }
     }
