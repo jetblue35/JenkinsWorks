@@ -11,7 +11,7 @@ pipeline {
                     // Create reports directory if not exists
                     sh 'mkdir -p reports'
                     // Run CppNCSS and generate report
-                    sh 'cppncss -f=reports/cppncss_report.xml --recursive .'
+                    sh 'cppncss -x -f=reports/cppncss_report.xml --recursive .'
                 }
             }
         }
