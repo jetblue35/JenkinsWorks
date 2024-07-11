@@ -15,6 +15,12 @@ pipeline {
                 }
             }
         }
+        stage('Publish CppNCSS Report') {
+            steps {
+                // Publish the CppNCSS report
+                publishCppNCSS pattern: 'reports/reports.xml'
+            }
+        }
     }
     post {
         success {
