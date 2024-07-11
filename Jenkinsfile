@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Publish Results') {
             steps {
-                publishCppncssResults pattern: 'cppncss_report.xml'
+                junit 'cppncss_report.xml'
             }
         }
     }
