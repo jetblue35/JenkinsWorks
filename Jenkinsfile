@@ -15,6 +15,12 @@ pipeline {
                 junit 'test-reports/**/*.xml'
             }
         }
+        stage('Publish CppNCSS Report') {
+            steps {
+                // Publish the CppNCSS report
+                publishCppNCSS pattern: 'reports/reports.xml'
+            }
+        }
     }
     
     post {
