@@ -7,12 +7,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cppncss -x -f ./cppncss_report.xml --recursive .'
+                sh 'mkdir -p /var/lib/jenkins/workspace/pipeline1/reports'
+                sh 'cppncss -x -f ./reports/cppncss_report.xml --recursive .'
             }
         }
         stage('Publish Results') {
             steps {
-                junit 'cppncss_report.xml'
+                junit 'reports/cppncss_report.xml'
             }
         }
     }
