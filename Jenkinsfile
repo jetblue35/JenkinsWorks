@@ -18,7 +18,7 @@ pipeline {
         stage('Publish CppNCSS Report') {
             steps {
                 // Publish the CppNCSS report
-                publishCppNCSS pattern: 'reports/reports.xml'
+                publishCppNCSS pattern: 'reports/cppncss_report.xml'
             }
         }
     }
