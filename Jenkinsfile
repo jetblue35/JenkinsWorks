@@ -7,21 +7,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mkdir -p reports'
-                sh 'cppncss  -f=reports/cppncss_report.xml --recursive .'
-            }
-        }
-        stage('Publish CppNCSS Report') {
-            steps {
-                // Publish the CppNCSS report
-                publishCppNCSS pattern: 'reports/report.xml'
+                script {
+                    // Create reports directory if not exists
+                    sh 'mkdir -p reports'
+                    // Run CppNCSS and generate report
+                    sh 'cppncss -f reports/cppncss_report.xml --recursive .'
+                }
             }
         }
     }
-    
     post {
-        always {
+        success {
+            // Archive CppNCSS report as an artifact
             archiveArtifacts artifacts: 'reports/cppncss_report.xml', allowEmptyArchive: true
+        }
+        always {
+            // You can add additional post actions here
         }
     }
 }
