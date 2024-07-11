@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        PATH = "${env.PATH}:/home/bursiyer/cppncss-1.0.3/bin"
+    }
     stages {
         stage('Build') {
             steps {
