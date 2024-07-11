@@ -21,8 +21,5 @@ pipeline {
             // Archive CppNCSS report as an artifact
             archiveArtifacts artifacts: 'reports/cppncss_report.xml', allowEmptyArchive: true
         }
-        always {
-            // You can add additional post actions here
-        }
     }
 }
