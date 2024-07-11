@@ -65,6 +65,7 @@ pipeline {
                     -MTEST_THROW_ARG1 \
                     -MGET_NEXT_KEYSET \
                     -MSORT_KEYSET_TWOKEYS
+                    -x reports/cppncss_report.xml
                 '''
             }
         }
