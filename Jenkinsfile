@@ -17,10 +17,11 @@ pipeline {
         }
         stage('Publish CppNCSS Report') {
             steps {
-                // Publish the CppNCSS report
-                publishCppNCSS pattern: 'reports/cppncss_report.xml'
+                // Publish the CppNCSS report using step function
+                step([$class: 'CppNCSSPublisher', pattern: 'reports/cppncss_report.xml'])
             }
         }
+
     }
     post {
         success {
