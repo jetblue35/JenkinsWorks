@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mkdir -p reports'
-                sh 'cppncss -x reports/cppncss_report.xml --recursive .'
+                sh 'cppncss  -f=reports/cppncss_report.xml --recursive .'
             }
         }
         stage('Publish CppNCSS Report') {
