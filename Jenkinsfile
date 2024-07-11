@@ -7,16 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    sh 'cppncss --output=cppncss_report.xml --recursive .'
-                }
+                sh 'cppncss -x -f cppncss_report.xml --recursive .'
             }
         }
         stage('Publish Results') {
             steps {
-                script {
-                    junit '**/cppncss_report.xml'
-                }
+                junit 'cppncss_report.xml'
             }
         }
     }
