@@ -9,7 +9,7 @@ pipeline {
             steps {
                 sh 'mkdir -p /var/lib/jenkins/workspace/pipeline1/reports'
                 sh '''
-                    cppncss -v -k -r -n=30 . \
+                    cppncss -v -k -r -n=30 -x -f=reports/cppncss_report.xml . \
                     -DATL_NO_VTABLE \
                     -DXERCES_CPP_NAMESPACE_USE \
                     -DXERCES_CPP_NAMESPACE_BEGIN \
