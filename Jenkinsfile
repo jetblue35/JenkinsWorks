@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cppncss -x -f cppncss_report.xml --recursive .'
+                sh 'cppncss -x -f ./cppncss_report.xml --recursive .'
             }
         }
         stage('Publish Results') {
